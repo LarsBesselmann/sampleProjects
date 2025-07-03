@@ -168,5 +168,63 @@ How to demo MoRE - DRAFT
 
 ## Deploy the application
 
+1. Select the updated WhereAmI application (which has the version 2.0.1) and select Liberty as target runtime
+
+	<kbd>![](./images/media/MoRE_deployApp1.png)</kbd>
+
+2. Choose the Fast Path deployment and leave the defaults for the name
+
+	<kbd>![](./images/media/MoRE_deployApp2.png)</kbd>
+
+	<kbd>![](./images/media/MoRE_deployApp3.png)</kbd>
+
+3. Map the application to the Liberty cluster and the IBM HTTP Server
+
+	<kbd>![](./images/media/MoRE_deployApp4.png)</kbd>
 
 
+4. Leave the default host
+
+	<kbd>![](./images/media/MoRE_deployApp5.png)</kbd>
+
+5. Change the context root to **/liberty**
+
+	<kbd>![](./images/media/MoRE_deployApp6.png)</kbd>
+
+6. Review the summary
+
+	<kbd>![](./images/media/MoRE_deployApp7.png)</kbd>
+
+
+7. Take a look at the wsadmin script
+
+	<kbd>![](./images/media/MoRE_deployApp8.png)</kbd>
+
+8. Finally save the application. It should be listed as stopped.
+
+	<kbd>![](./images/media/MoRE_deployApp9.png)</kbd>
+
+
+## Start the cluster and test the application
+
+1. Start the cluster
+
+	<kbd>![](./images/media/MoRE_runApplication1.png)</kbd>
+
+
+2. Review the wsadmin script
+
+	<kbd>![](./images/media/MoRE_runApplication2.png)</kbd>
+
+
+3. Access the application via IBM HTTP Server
+
+	<kbd>![](./images/media/MoRE_runApplication3.png)</kbd>
+
+4. Reload the page and you should see that it switches been both Liberty instances.
+
+	<kbd>![](./images/media/MoRE_runApplication4.png)</kbd>
+
+
+**This concludes the demo**
+You should have seen how easy it can be to migrate an application from traditional WAS to managed Liberty and that you could use the same operational model in managed Liberty.
