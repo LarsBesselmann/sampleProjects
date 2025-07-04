@@ -136,10 +136,11 @@ From the Admin Console, set the console preferences to enable command assistance
 			cd ~/Downloads
 			tar -zxvf DiscoveryTool-Linux_MoRE_Demo.tgz
 
-	2. run the data collector against the MoRE cell via command
+	2. Start the data collector against the MoRE cell via command
 
 			cd ~/Downloads
 			transformationadvisor-4.3.0/bin/transformationadvisor -w /home/techzone/IBM/WebSphere/AppServer/
+		Accept the license agreement when asked to do so.
 
 	3. Wait until the collection has been uploaded and is available in AMA
 
