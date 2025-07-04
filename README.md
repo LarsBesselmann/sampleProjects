@@ -75,6 +75,8 @@ Note: This configuration is needed to generate the wsadmin command assistance fo
 
 8. Create a tWAS cluster called tWASCluster1 and two members (tWASMember1, tWASMember2), one on each node.
 
+		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh -lang jython -user techzone -password IBMDem0s! -f ~/Student/labs/WhereAmI_MoRE_Demo/setupScripts/createCluster.py 
+
 9. Deploy the generated war file to the tWAS cluster, set the context root to **/tWAS**
 
 10. Start the application.

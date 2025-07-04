@@ -4,4 +4,4 @@ AdminTask.createClusterMember('[-clusterName tWASCluster1 -memberConfig [-member
 AdminTask.createClusterMember('[-clusterName tWASCluster1 -memberConfig [-memberNode rhel9-baseNode02 -memberName tWASMember2 -memberWeight 2 -genUniquePorts true -replicatorEntry false]]')
 # Note that scripting list commands may generate more information than is displayed by the administrative console because the console generally filters with respect to scope, templates, and built-in entries.
 AdminConfig.list('ServerCluster', AdminConfig.getid( '/Cell:rhel9-baseCell01/'))
-AdminConfig.save
+AdminConfig.save()
