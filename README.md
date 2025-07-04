@@ -61,10 +61,15 @@ Included with the demo, is a new version of the Mod Reports application that is 
 		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/startManager.sh 
 		~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/startNode.sh
 		~/IBM/WebSphere/AppServer/profiles/AppSrv02/bin/startNode.sh
-	Access via browser the WebSphere Admin Console via URL: https://localhost:9043/ibm/console, User ID: techzone, password: **IBMDem0s!**
 
-7. From the Admin Console, set the console preferences to enable command assistance and log command assistance. <br>
-Note: This configuration is needed to generate the wsadmin command assistance for UI driven tasks.
+7. Create a tWAS cluster called tWASCluster1 and two members (tWASMember1, tWASMember2), one on each node.
+
+		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh -lang jython -user techzone -password IBMDem0s! -f ~/Student/labs/WhereAmI_MoRE_Demo/setupScripts/createCluster.py 
+
+8. 	Access via browser the WebSphere Admin Console via URL: https://localhost:9043/ibm/console, User ID: techzone, password: **IBMDem0s!**
+
+	From the Admin Console, set the console preferences to enable command assistance and log command assistance. <br>
+	Note: This configuration is needed to generate the wsadmin command assistance for UI driven tasks.
 
 	a. Navigation: System administration > Console preferences
 
@@ -73,9 +78,6 @@ Note: This configuration is needed to generate the wsadmin command assistance fo
 		Enable command assistance notifications
 		Log command assistance commands
 
-8. Create a tWAS cluster called tWASCluster1 and two members (tWASMember1, tWASMember2), one on each node.
-
-		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh -lang jython -user techzone -password IBMDem0s! -f ~/Student/labs/WhereAmI_MoRE_Demo/setupScripts/createCluster.py 
 
 9. Deploy the generated war file to the tWAS cluster, set the context root to **/tWAS**
 
