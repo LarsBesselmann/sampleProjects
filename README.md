@@ -20,7 +20,7 @@ https://techzone.ibm.com/collection/mo-re--ama-demos-and-environment-2q25-releas
 
 2. Switch to the directory WhereAmI_MoRE_Demo and uzip the initial project
 
-		cd ~/Student/labs/sampleProjects
+		cd ~/Student/labs/WhereAmI_MoRE_Demo
 		unzip WhereAmI-2.0.0-Project.zip
 
 3. Switch to the WhereAmI directory 
