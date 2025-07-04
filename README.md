@@ -365,7 +365,7 @@ You should have seen how easy it can be to migrate an application from tradition
 
 4. Remove the project directory
 
-		rm -rf ~/Student/labs
+		rm -rf ~/Student/labs/WhereAmI
 
 		
 
