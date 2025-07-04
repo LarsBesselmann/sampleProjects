@@ -348,6 +348,22 @@ You should have seen how easy it can be to migrate an application from tradition
 
 ## Cleanup
 
+### Clean up AMA
+
+1. In AMA, delete the AMA workspace **MoRE_Demo**
+
+2. Stop AMA
+
+		cd ~/application-modernization-accelerator-local-4.3.0/
+		scripts/stopLocal.sh 
+		
+3. Remove the data collector 
+
+		rm -rf ~/Downloads/DiscoveryTool-Linux_MoRE_Demo.tgz
+		rm -rf ~/Downloads/DiscoveryTool-Linux_MoRE_Demo
+
+### Cleanup WebSphere
+
 1. Uninstall the WhereAmI application
 
 		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh -lang jython -user techzone -password IBMDem0s! -f ~/Student/labs/WhereAmI_MoRE_Demo/setupScripts/tWASCluster_WhereAmI_uninstall.py 
@@ -356,16 +372,17 @@ You should have seen how easy it can be to migrate an application from tradition
 
 		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh -lang jython -user techzone -password IBMDem0s! -f ~/Student/labs/WhereAmI_MoRE_Demo/setupScripts/tWASCluster_delete.py 
 
-
 3. Stop the Dmgr and the two Node agents
 
 		~/IBM/WebSphere/AppServer/profiles/AppSrv02/bin/stopNode.sh
 		~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/stopNode.sh
 		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/stopManager.sh 
 
-4. Remove the project directory
+### Remove the lab assests
+1. Close VS Code
+
+2. Remove the project directory
 
 		rm -rf ~/Student/labs/WhereAmI
 
-		
 
