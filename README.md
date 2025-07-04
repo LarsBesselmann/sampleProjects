@@ -58,6 +58,10 @@ Included with the demo, is a new version of the Mod Reports application that is 
 
 6. Start the Dmgr and the Node agents
 
+		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/startManager.sh 
+		~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/startNode.sh
+		~/IBM/WebSphere/AppServer/profiles/AppSrv02/bin/startNode.sh
+
 7. Create a tWAS cluster called tWASCluster1 and 2 members, one on each node.
 
 8. Deploy the generated war file to the tWAS cluster, set the context root to **/tWAS**
