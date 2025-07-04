@@ -16,18 +16,17 @@ https://techzone.ibm.com/collection/mo-re--ama-demos-and-environment-2q25-releas
 1. Create a working directory and download the project
 
 		mkdir -p ~/Student/labs
-		cd ~/Student/labs
-		git clone https://github.com/LarsBesselmann/sampleProjects.git
+		git clone https://github.com/LarsBesselmann/sampleProjects.git ~/Student/labs
 
 2. Switch to the directory WhereAmI_MoRE_Demo and uzip the initial project
 
-		cd sampleProjects/WhereAmI_MoRE_Demo
+		cd ~/Student/labs/sampleProjects/WhereAmI_MoRE_Demo
 
 		unzip WhereAmI-2.0.0-Project.zip
 
 3. Switch to the WhereAmI directory 
 
-	cd WhereAmI_JavaEE_Project/WhereAmI
+		cd WhereAmI_JavaEE_Project/WhereAmI
 
 4. Build the application with maven
 
