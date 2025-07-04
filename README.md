@@ -1,6 +1,17 @@
-How to demo MoRE - DRAFT
+How to demo Modernized Runtime Extension for Java End-to-End - DRAFT
+
+The following guide should help to do a simple end-to-end demo.
+Main steps:
+1. Demonstrate the application in traditional WAS
+2. Analyze the application using Application Modernization Accelerator (AMA) to identify issues when migrating to Liberty
+3. Fix modernization issues using the Application Modernization Accelerator Development Tools
+4. Create a Liberty cluster in MoRE and deploy the application
+
+It is based on the MoRE TechZone environment:
+https://techzone.ibm.com/collection/mo-re--ama-demos-and-environment-2q25-release
 
 ## Preparation:
+
 
 1. mkdir -p ~/Student/labs
 
