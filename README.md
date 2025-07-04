@@ -25,7 +25,7 @@ https://techzone.ibm.com/collection/mo-re--ama-demos-and-environment-2q25-releas
 
 3. Switch to the WhereAmI directory 
 
-		cd WhereAmI_JavaEE_Project/WhereAmI
+		cd WhereAmI
 
 4. Build the application with maven
 
