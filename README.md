@@ -383,6 +383,7 @@ You should have seen how easy it can be to migrate an application from tradition
 
 2. Remove the project directory
 
+		cd ~
 		rm -rf ~/Student/labs/WhereAmI
 
 
