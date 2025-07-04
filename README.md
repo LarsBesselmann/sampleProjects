@@ -79,7 +79,8 @@ Included with the demo, is a new version of the Mod Reports application that is 
 
 4. 	Access via browser the WebSphere Admin Console via URL: https://localhost:9043/ibm/console, User ID: techzone, password: **IBMDem0s!**
 
-5. Enable the command assistance <br>
+5. Enable the command assistance
+
 From the Admin Console, set the console preferences to enable command assistance and log command assistance. This will allow to see the wsadmin commands for UI driven tasks.
 
 	a. Navigation: System administration > Console preferences
@@ -92,6 +93,7 @@ From the Admin Console, set the console preferences to enable command assistance
 
 6. Start the cluster tWASCluster1
 
+	Use either the Admin Console or the following script:
 
 		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh -lang jython -user techzone -password IBMDem0s! -f ~/Student/labs/WhereAmI_MoRE_Demo/setupScripts/tWASCluster_start.py 
 
