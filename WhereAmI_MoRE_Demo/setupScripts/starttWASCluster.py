@@ -1,0 +1,2 @@
+# Start the traditiona WAS cluster tWASCluster1
+AdminControl.invoke('WebSphere:name=tWASCluster1,process=dmgr,platform=common,node=rhel9-baseCellManager01,version=9.0.5.24,type=Cluster,mbeanIdentifier=tWASCluster1,cell=rhel9-baseCell01,spec=1.0', 'start') 
