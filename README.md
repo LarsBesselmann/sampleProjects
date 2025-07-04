@@ -13,8 +13,9 @@ https://techzone.ibm.com/collection/mo-re--ama-demos-and-environment-2q25-releas
 ## Preparation:
 
 
-1. mkdir -p ~/Student/labs
+1. Create a working directory and download the project
 
+		mkdir -p ~/Student/labs
 		git clone https://github.com/LarsBesselmann/sampleProjects.git
 
 2. Switch to the directory WhereAmI_MoRE_Demo and uzip the initial project
