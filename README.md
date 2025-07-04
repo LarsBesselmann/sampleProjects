@@ -190,7 +190,7 @@ From the Admin Console, set the console preferences to enable command assistance
 
 	<kbd>![](./images/media/AMA_Assessment.png)</kbd>
 
-4. Get more insight about the issues
+4. Select MoRE as as target, then click on the WhereAmI application to get more insight about the issues
 
 	<kbd>![](./images/media/AMA_WhereAmI_Assessment1.png)</kbd>
 
