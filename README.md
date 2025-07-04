@@ -31,9 +31,7 @@ https://techzone.ibm.com/collection/mo-re--ama-demos-and-environment-2q25-releas
 
         mvn install:install-file -Dfile=./was_dependency/was_public.jar -DpomFile=./was_dependency/was_public-9.0.0.pom
 
-    You should see something like
-
-    <kbd>![](./images/media/modresorts_mvn_install_jar.png)</kbd>
+    You should see a success message.
 
 5. Build the application with maven
 
