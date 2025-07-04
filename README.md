@@ -63,27 +63,38 @@ Included with the demo, is a new version of the Mod Reports application that is 
 		~/IBM/WebSphere/AppServer/profiles/AppSrv02/bin/startNode.sh
 	Access via browser the WebSphere Admin Console via URL: https://localhost:9043/ibm/console, User ID: techzone, password: **IBMDem0s!**
 
-7. Create a tWAS cluster called tWASCluster1 and 2 members, one on each node.
+7. From the Admin Console, set the console preferences to enable command assistance and log command assistance. <br>
+Note: This configuration is needed to generate the wsadmin command assistance for UI driven tasks.
 
-8. Deploy the generated war file to the tWAS cluster, set the context root to **/tWAS**
+	a. Navigation: System administration > Console preferences
 
-9. Start the application.
+	b. Select the following options:
+
+		Enable command assistance notifications
+		Log command assistance commands
+
+8. Create a tWAS cluster called tWASCluster1 and 2 members, one on each node.
+
+9. Deploy the generated war file to the tWAS cluster, set the context root to **/tWAS**
+
+10. Start the application.
 
 	<kbd>![](./images/media/WhereAmI_tWAS_started.png)</kbd>
 
 	<kbd>![](./images/media/WhereAmI_tWAS_deployed.png)</kbd>
 
-10. Start the IBM HTTP Server via 
+11. Start the IBM HTTP Server via 
 
 		/home/techzone/IBM/HTTPServer/bin/apachectl start
 
-11. Access the application via IHS: http://localhost:8080/tWAS/WhereAmI
+12. Access the application via IHS: http://localhost:8080/tWAS/WhereAmI
 
 	<kbd>![](./images/media/WhereAmI_tWAS1.png)</kbd>
 
-12. Reload the page and you should see that the application switches between the two tWAS servers.
+13. Reload the page and you should see that the application switches between the two tWAS servers.
 
 	<kbd>![](./images/media/WhereAmI_tWAS2.png)</kbd>
+
 
 ## Analysis using AMA
 
