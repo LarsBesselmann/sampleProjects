@@ -372,7 +372,12 @@ You should have seen how easy it can be to migrate an application from tradition
 
 		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh -lang jython -user techzone -password IBMDem0s! -f ~/Student/labs/WhereAmI_MoRE_Demo/setupScripts/tWASCluster_delete.py 
 
-3. Stop the Dmgr and the two Node agents
+3. Stop the IBM HTTP Server via command
+
+		/home/techzone/IBM/HTTPServer/bin/apachectl stop
+
+
+4. Stop the Dmgr and the two Node agents
 
 		~/IBM/WebSphere/AppServer/profiles/AppSrv02/bin/stopNode.sh
 		~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/stopNode.sh
@@ -384,6 +389,6 @@ You should have seen how easy it can be to migrate an application from tradition
 2. Remove the project directory
 
 		cd ~
-		rm -rf ~/Student/labs/WhereAmI
+		rm -rf ~/Student/labs
 
 
