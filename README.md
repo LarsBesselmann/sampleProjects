@@ -370,6 +370,7 @@ You should have seen how easy it can be to migrate an application from tradition
 
 		rm -rf ~/Downloads/DiscoveryTool-Linux_MoRE_Demo.tgz
 		rm -rf ~/Downloads/DiscoveryTool-Linux_MoRE_Demo
+		rm -rf ~/Downloads/WhereAmI-2_0_0_war.ear_migrationPlan.zip
 
 ### Cleanup WebSphere
 
