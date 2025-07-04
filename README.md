@@ -27,32 +27,42 @@ https://techzone.ibm.com/collection/mo-re--ama-demos-and-environment-2q25-releas
 
 		cd WhereAmI
 
-4. Build the application with maven
+4. As the modresorts project depends on was_public.jar, you must make it visible to maven to avoid build failures. Run the following command 
+
+        mvn install:install-file -Dfile=./was_dependency/was_public.jar -DpomFile=./was_dependency/was_public-9.0.0.pom
+
+    You should see something like
+
+    <kbd>![](./images/media/modresorts_mvn_install_jar.png)</kbd>
+
+5. Build the application with maven
 
 		mvn clean
 		mvn package
 
 	The generated war file is: target/WhereAmI-2.0.0.war
 
-5. Create a tWAS cluster called tWASCluster1 and 2 members, one on each node.
+6. Start the Dmgr and the Node agents
 
-6. Deploy the generated war file to the tWAS cluster, set the context root to **/tWAS**
+7. Create a tWAS cluster called tWASCluster1 and 2 members, one on each node.
 
-7. Start the application.
+8. Deploy the generated war file to the tWAS cluster, set the context root to **/tWAS**
+
+9. Start the application.
 
 	<kbd>![](./images/media/WhereAmI_tWAS_started.png)</kbd>
 
 	<kbd>![](./images/media/WhereAmI_tWAS_deployed.png)</kbd>
 
-7. Start the IBM HTTP Server via 
+10. Start the IBM HTTP Server via 
 
 		/home/techzone/IBM/HTTPServer/bin/apachectl start
 
-8. Access the application via IHS: http://localhost:8080/tWAS/WhereAmI
+11. Access the application via IHS: http://localhost:8080/tWAS/WhereAmI
 
 	<kbd>![](./images/media/WhereAmI_tWAS1.png)</kbd>
 
-9. Reload the page and you should see that the application switches between the two tWAS servers.
+12. Reload the page and you should see that the application switches between the two tWAS servers.
 
 	<kbd>![](./images/media/WhereAmI_tWAS2.png)</kbd>
 
