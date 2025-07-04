@@ -1,4 +1,4 @@
-How to demo Modernized Runtime Extension for Java End-to-End - DRAFT
+# How to demo Modernized Runtime Extension for Java End-to-End - DRAFT
 
 The following guide should help to do a simple end-to-end demo.
 Main steps:
@@ -29,6 +29,8 @@ Included with the demo, is a new version of the Mod Reports application that is 
 ## Preparation:
 
 
+### Prepare the maven project
+
 1. Create a working directory and download the project
 
 		mkdir -p ~/Student/labs
@@ -45,7 +47,7 @@ Included with the demo, is a new version of the Mod Reports application that is 
 
 4. As the modresorts project depends on was_public.jar, you must make it visible to maven to avoid build failures. Run the following command 
 
-        mvn install:install-file -Dfile=./was_dependency/was_public.jar -DpomFile=./was_dependency/was_public-9.0.0.pom
+   	    mvn install:install-file -Dfile=./was_dependency/was_public.jar -DpomFile=./was_dependency/was_public-9.0.0.pom
 
     You should see a success message.
 
@@ -56,61 +58,78 @@ Included with the demo, is a new version of the Mod Reports application that is 
 
 	The generated war file is: target/WhereAmI-2.0.0.war
 
-6. Start the Dmgr and the Node agents
+
+### Prepare the MoRE cell
+
+1. Start the Dmgr and the two Node agents
 
 		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/startManager.sh 
 		~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/startNode.sh
 		~/IBM/WebSphere/AppServer/profiles/AppSrv02/bin/startNode.sh
 
-7. Create a tWAS cluster called tWASCluster1 and two members (tWASMember1, tWASMember2), one on each node.
+2. Create a tWAS cluster called tWASCluster1 and two members (tWASMember1, tWASMember2), one on each node.
 
 		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh -lang jython -user techzone -password IBMDem0s! -f ~/Student/labs/WhereAmI_MoRE_Demo/setupScripts/createCluster.py 
 
-8. 	Access via browser the WebSphere Admin Console via URL: https://localhost:9043/ibm/console, User ID: techzone, password: **IBMDem0s!**
+3. 	Access via browser the WebSphere Admin Console via URL: https://localhost:9043/ibm/console, User ID: techzone, password: **IBMDem0s!**
 
-	From the Admin Console, set the console preferences to enable command assistance and log command assistance. <br>
-	Note: This configuration is needed to generate the wsadmin command assistance for UI driven tasks.
+4. Enable the command assistance <br>
+From the Admin Console, set the console preferences to enable command assistance and log command assistance. This will allow to see the wsadmin commands for UI driven tasks.
 
 	a. Navigation: System administration > Console preferences
 
 	b. Select the following options:
 
-		Enable command assistance notifications
-		Log command assistance commands
+			Enable command assistance notifications
+			Log command assistance commands
 
 
-9. Deploy the generated war file to the tWAS cluster, set the context root to **/tWAS**
+### Deploy the generated war file to the tWAS cluster
 
-10. Start the application.
+1. Install the generated application war to the tWAS cluster. During installation, adjust the context root to **/tWAS**.
+
+2. Start the cluster tWASCluster1
+
+2. Verify that the application has been started.
 
 	<kbd>![](./images/media/WhereAmI_tWAS_started.png)</kbd>
 
 	<kbd>![](./images/media/WhereAmI_tWAS_deployed.png)</kbd>
 
-11. Start the IBM HTTP Server via 
+4. Start the IBM HTTP Server via command
 
 		/home/techzone/IBM/HTTPServer/bin/apachectl start
 
-12. Access the application via IHS: http://localhost:8080/tWAS/WhereAmI
+5. Access the application via IHS: http://localhost:8080/tWAS/WhereAmI
 
 	<kbd>![](./images/media/WhereAmI_tWAS1.png)</kbd>
 
-13. Reload the page and you should see that the application switches between the two tWAS servers.
+6. Reload the page and you should see that the application switches between the two tWAS servers.
 
 	<kbd>![](./images/media/WhereAmI_tWAS2.png)</kbd>
 
 
-## Analysis using AMA
+### Prepare AMA
 
-1. In AMA, create a workspace named **MoRE_Demo**
+1. Start AMA
 
-2. Download the data collector (tar -zxvf DiscoveryTool-Linux_MoRE_Demo.tgz )
+		cd ~/application-modernization-accelerator-local-4.3.0/
+		scripts/startLocal.sh 
 
-3. run the data collector against the MoRE cell via command
+2. Open a browser and access AMA via the URL https://rhel9-base.gym.lan:3001
+
+3. In AMA, create a workspace named **MoRE_Demo**
+
+4. Run the data collector to create a data collection and upload it
+
+	1. Download the data collector (tar -zxvf DiscoveryTool-Linux_MoRE_Demo.tgz )
+
+	2. run the data collector against the MoRE cell via command
 
 		transformationadvisor-4.3.0/bin/transformationadvisor -w /home/techzone/IBM/WebSphere/AppServer/
 
-4. Wait until the collection has been uploaded and is available in AMA
+	3. Wait until the collection has been uploaded and is available in AMA
+
 
 5. Show in the **Visualization** tab that there are no dependencies to other applications
 
@@ -120,7 +139,42 @@ Included with the demo, is a new version of the Mod Reports application that is 
 
 	<kbd>![](./images/media/AMA_Assessment.png)</kbd>
 
-7. Get more insight about the issues
+7. Switch back to the **Visualization** tab.
+
+
+## Demo the end-to-end flow
+
+
+### Demo the application running in tWAS
+
+1. Show that the application has been started.
+
+	<kbd>![](./images/media/WhereAmI_tWAS_started.png)</kbd>
+
+	<kbd>![](./images/media/WhereAmI_tWAS_deployed.png)</kbd>
+
+2. Access the application via IHS: http://localhost:8080/tWAS/WhereAmI
+
+	<kbd>![](./images/media/WhereAmI_tWAS1.png)</kbd>
+
+3. Reload the page and you should see that the application switches between the two tWAS servers.
+
+	<kbd>![](./images/media/WhereAmI_tWAS2.png)</kbd>
+
+
+### Demo the assessment via AMA
+
+1. Explain that the data colection has been created before to save time
+
+2. Show in the **Visualization** tab that there are no dependencies to other applications
+
+	<kbd>![](./images/media/AMA_Visualization.png)</kbd>
+
+3. Switch to the **Assessment** tab that the application can be migrated to MoRE but has some issues that must be fixed.
+
+	<kbd>![](./images/media/AMA_Assessment.png)</kbd>
+
+4. Get more insight about the issues
 
 	<kbd>![](./images/media/AMA_WhereAmI_Assessment1.png)</kbd>
 
@@ -128,12 +182,12 @@ Included with the demo, is a new version of the Mod Reports application that is 
 
 	<kbd>![](./images/media/AMA_WhereAmI_Assessment3.png)</kbd>
 
-8. Generate and download the migrationplan so that you can re-use it in AMA Dev Tools
+5. Generate and download the migrationplan so that you can re-use it in AMA Dev Tools
 
 	<kbd>![](./images/media/AMA_WhereAmI_Migrationplan.png)</kbd>
 
 
-## Use AMA Dev Tools to apply automated fixes
+## Demo how to use the AMA Dev Tools to apply automated fixes
 
 1. In a terminal window, switch to the WhereAmI directory and open VS Code
 
