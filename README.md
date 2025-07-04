@@ -138,8 +138,8 @@ From the Admin Console, set the console preferences to enable command assistance
 
 	2. run the data collector against the MoRE cell via command
 
-		cd ~/Downloads
-		transformationadvisor-4.3.0/bin/transformationadvisor -w /home/techzone/IBM/WebSphere/AppServer/
+			cd ~/Downloads
+			transformationadvisor-4.3.0/bin/transformationadvisor -w /home/techzone/IBM/WebSphere/AppServer/
 
 	3. Wait until the collection has been uploaded and is available in AMA
 
