@@ -16,11 +16,12 @@ https://techzone.ibm.com/collection/mo-re--ama-demos-and-environment-2q25-releas
 1. Create a working directory and download the project
 
 		mkdir -p ~/Student/labs
+		cd ~/Student/labs
 		git clone https://github.com/LarsBesselmann/sampleProjects.git
 
 2. Switch to the directory WhereAmI_MoRE_Demo and uzip the initial project
 
-		cd WhereAmI_MoRE_Demo
+		cd sampleProjects/WhereAmI_MoRE_Demo
 
 		unzip WhereAmI-2.0.0-Project.zip
 
