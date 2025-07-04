@@ -61,6 +61,7 @@ Included with the demo, is a new version of the Mod Reports application that is 
 		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/startManager.sh 
 		~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/startNode.sh
 		~/IBM/WebSphere/AppServer/profiles/AppSrv02/bin/startNode.sh
+	Access via browser the WebSphere Admin Console via URL: https://localhost:9043/ibm/console, User ID: techzone, password: **IBMDem0s!**
 
 7. Create a tWAS cluster called tWASCluster1 and 2 members, one on each node.
 
