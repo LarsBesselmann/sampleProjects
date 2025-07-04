@@ -10,6 +10,22 @@ Main steps:
 It is based on the MoRE TechZone environment:
 https://techzone.ibm.com/collection/mo-re--ama-demos-and-environment-2q25-release
 
+
+## Introduction
+
+MoRE provides the capability to continue using traditional WebSphere Application Server (tWAS) Operational Model to manage Java 17 and Java 8 applications within the same traditional WebSphere administrative environment.
+
+<kbd>![](./images/media/MoRE_Diagram.png)</kbd>
+
+In this demo, you will show how to extend a WebSphere ND Cell, using the MoRE feature pak, for managed Liberty servers to manage and run Java 17 / Jakarta EE 10 (subset) applications using the familiar WebSphere administrative mode and admin console.
+
+The demo first shows an example application “Mod  Resorts” running in WebSphere ND 9.0.23. The application is a simple Java 8 application using JEE 7 APIs. 
+
+Included with the demo, is a new version of the Mod Reports application that is built using Java 17 and Jakarta 10 EE APIs, which are supported in the managed Liberty Servers (MoRE).  
+
+
+
+
 ## Preparation:
 
 
