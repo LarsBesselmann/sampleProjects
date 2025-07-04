@@ -1,4 +1,3 @@
 # Administrative Scripting Commands to install the WhereAmI application on the tWAS cluster
 AdminApp.install('/home/techzone/Student/labs/WhereAmI_MoRE_Demo/WhereAmI/target/WhereAmI-2.0.0.war', '[ -nopreCompileJSPs -distributeApp -nouseMetaDataFromBinary -nodeployejb -appname WhereAmI-2_0_0_war -createMBeansForResources -noreloadEnabled -nodeployws -validateinstall warn -noprocessEmbeddedConfig -filepermission .*\.dll=755#.*\.so=755#.*\.a=755#.*\.sl=755 -noallowDispatchRemoteInclude -noallowServiceRemoteInclude -asyncRequestDispatchType DISABLED -nouseAutoLink -noenableClientModule -clientMode isolated -novalidateSchema -contextroot /tWAS -MapModulesToServers [[ WhereAmI-2.0.0.war WhereAmI-2.0.0.war,WEB-INF/web.xml WebSphere:cell=rhel9-baseCell01,node=rhel9-baseNode01,server=server1 ]] -MapWebModToVH [[ WhereAmI-2.0.0.war WhereAmI-2.0.0.war,WEB-INF/web.xml default_host ]] -CtxRootForWebMod [[ WhereAmI-2.0.0.war WhereAmI-2.0.0.war,WEB-INF/web.xml /tWAS ]]]' ) 
-AdminConfig.save()
-~                    
+AdminConfig.save()                    

@@ -69,12 +69,12 @@ Included with the demo, is a new version of the Mod Reports application that is 
 
 2. Create a tWAS cluster called tWASCluster1 and two members (tWASMember1, tWASMember2), one on each node.
 
-		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh -lang jython -user techzone -password IBMDem0s! -f ~/Student/labs/WhereAmI_MoRE_Demo/setupScripts/createCluster.py 
+		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh -lang jython -user techzone -password IBMDem0s! -f ~/Student/labs/WhereAmI_MoRE_Demo/setupScripts/tWASCluster_create.py 
 
 3. Install the generated application war to the tWAS cluster. During installation, adjust the context root to **/tWAS**.
 
 
-		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh -lang jython -user techzone -password IBMDem0s! -f ~/Student/labs/WhereAmI_MoRE_Demo/setupScripts/installtWhereAmIontWAS.py 
+		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh -lang jython -user techzone -password IBMDem0s! -f ~/Student/labs/WhereAmI_MoRE_Demo/setupScripts/tWASCluster_installt_WhereAmI.py 
 
 
 4. 	Access via browser the WebSphere Admin Console via URL: https://localhost:9043/ibm/console, User ID: techzone, password: **IBMDem0s!**
@@ -91,6 +91,9 @@ From the Admin Console, set the console preferences to enable command assistance
 
 
 6. Start the cluster tWASCluster1
+
+
+		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh -lang jython -user techzone -password IBMDem0s! -f ~/Student/labs/WhereAmI_MoRE_Demo/setupScripts/tWASCluster_start.py 
 
 7. Verify that the application has been started.
 
