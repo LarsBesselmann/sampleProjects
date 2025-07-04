@@ -344,3 +344,28 @@ From the Admin Console, set the console preferences to enable command assistance
 
 **This concludes the demo**
 You should have seen how easy it can be to migrate an application from traditional WAS to managed Liberty and that you could use the same operational model in managed Liberty.
+
+
+## Cleanup
+
+1. Uninstall the WhereAmI application
+
+		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh -lang jython -user techzone -password IBMDem0s! -f ~/Student/labs/WhereAmI_MoRE_Demo/setupScripts/tWASCluster_WhereAmI_uninstall.py 
+
+2. Delete the tWAS cluster called tWASCluster1 and the two members (tWASMember1, tWASMember2).
+
+		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh -lang jython -user techzone -password IBMDem0s! -f ~/Student/labs/WhereAmI_MoRE_Demo/setupScripts/tWASCluster_delete.py 
+
+
+3. Stop the Dmgr and the two Node agents
+
+		~/IBM/WebSphere/AppServer/profiles/AppSrv02/bin/stopNode.sh
+		~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/stopNode.sh
+		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/stopManager.sh 
+
+4. Remove the project directory
+
+		rm -rf ~/Student/labs
+
+		
+
