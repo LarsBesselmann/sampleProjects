@@ -73,7 +73,7 @@ Note: This configuration is needed to generate the wsadmin command assistance fo
 		Enable command assistance notifications
 		Log command assistance commands
 
-8. Create a tWAS cluster called tWASCluster1 and 2 members, one on each node.
+8. Create a tWAS cluster called tWASCluster1 and two members (tWASMember1, tWASMember2), one on each node.
 
 9. Deploy the generated war file to the tWAS cluster, set the context root to **/tWAS**
 
